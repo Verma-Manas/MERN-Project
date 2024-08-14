@@ -1,0 +1,867 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+/* COURSE CARD SECTION */
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    
+}
+.Course_Cards_Container{
+    padding: 2% 3%;
+}
+
+.courses-heading {
+    text-align: center;
+    margin: 2vw 0;
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2vw;
+    justify-content: center;
+    padding: 20px;
+}
+
+@media (min-width: 600px) {
+    .courses-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.course-item {
+    position: relative;
+    background-color: aliceblue;
+    border-radius: 2vh;
+    overflow: hidden;
+    width: 29.1vw;
+    height: auto;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.course-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 60%;
+}
+
+.course-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 2vh 2vh 0 0;
+}
+
+.course-text-overlay {
+    position: relative;
+    padding: 1vw;
+    height: auto;
+    background: #fff;
+    border-radius: 0 0 12px 12px;
+    color: rgb(65, 64, 64);
+    box-sizing: border-box;
+    flex-grow: 1;
+}
+
+.course-description {
+    font-size: 1.1vw;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.course-know-more {
+    color: #3940A0;
+    font-weight: 600;
+    font-size: 1.1vw;
+    line-height: 1.4;
+    margin-top: 1.5vh;
+    cursor: pointer;
+    padding: 0.5vw 1.5vw; /* Adjust padding using vw units */
+    border: 1px solid rgb(100, 0, 200);
+    border-radius: 0.5vw; /* Adjust border-radius using vw units */
+    background-color: transparent; /* Ensure background is transparent */
+}
+
+.course-know-more:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 600px) and (max-width: 820px) {
+    .courses-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3vw;
+    }
+
+    .course-item {
+        width: 42.6vw;
+        height: auto;
+    }
+
+    .course-image-wrapper {
+        height: 50%;
+    }
+
+    .course-text-overlay {
+        padding: 1.5vw;
+    }
+
+    .course-description {
+        font-size: 1.9vw;
+    }
+
+    .course-know-more {
+        font-size: 1.8vw;
+        margin-top: 1.8vh;
+        padding: 0.6vw 1.8vw; /* Adjust padding */
+    }
+}
+
+@media (max-width: 600px) {
+    .courses-grid {
+        grid-template-columns: 1fr;
+        gap: 4vw;
+    }
+
+    .course-item {
+        width: 92vw;
+        height: auto;
+    }
+
+    .course-image-wrapper {
+        height: auto;
+    }
+
+    .course-image {
+        height: auto;
+    }
+
+    .course-text-overlay {
+        padding: 2vw;
+    }
+
+    .course-description {
+        font-size: 2.5vw;
+    }
+
+    .course-know-more {
+        font-size: 3vw;
+        margin-top: 2vh;
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+    .btn {
+        padding-left: 10vw;
+        padding-right: 10vw;
+        padding-top: 1vw;
+        padding-bottom: 1vw;
+        border-radius: 1vw;
+        width: auto;
+    }
+}
+.btn{
+    background-color: #ffffff00;
+    border: 1px solid rgb(100, 0, 200);
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    border-radius: 1vw;
+    display: inline-block; /* Ensure button is treated as an inline element for centering */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.btn:active {
+    color: black;
+    background-color: rgba(0, 0, 0, 0.033);
+    transition: 300ms;
+
+}.btn-container {
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+/******************** MOCK ASSESSMENT SECTION ********************/
+
+.mock-assessments-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+    justify-content: center;
+    gap: 20px; /* Add some space between items */
+    padding: 2%; /* Add fixed padding around the container */
+}
+
+.mock-assessment-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 1px solid #E7EAEE;
+    border-radius: 12px;
+    background-color: #F7F8F9;
+    padding: 20px;
+    width: 23%; /* Adjust width to fit 4 items in a row */
+    
+}
+
+/* Logos */
+.mock-assessment-logo {
+    display: block;
+}
+
+.flipkart-logo {
+    width: 124px;
+    height: 32px;
+}
+
+.amazon-logo {
+    width: 93px;
+    height: 28px;
+}
+
+.google-logo {
+    width: 84px;
+    height: 28px;
+}
+
+/* Text */
+.head {
+    text-align: left; /* Center text within the element */
+    margin: 0;          /* Remove default margin */
+    font-size: 2rem;    /* Adjust font size as needed */
+}
+
+.mock-assessment-details {
+    text-align: left;
+}
+
+.mock-assessment-heading {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 2%;
+}
+
+.mock-assessment-problems,
+.mock-assessment-duration,
+.mock-assessment-level {
+    margin: 5px 0;
+}
+
+.mock-assessment-button {
+    text-align: center;
+    border: none;
+    background-color: #3940A0;
+    color: #FFFFFF;
+    height: 48px;
+    width: 100%;
+    border-radius: 6px;
+    /* padding: 12px 24px; */
+    padding: 0.9vw 7.3vw;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 2%;
+}
+
+.mock-section {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+
+@media (max-width: 1500px) {
+  .mock-assessments-container {
+      display: flex;
+      flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+      justify-content: center;
+      gap: 20px; /* Add some space between items */
+      padding: 3%; /* Add fixed padding around the container */
+  }
+
+  .mock-assessment-button{
+    font-size: 1vw;
+    padding: 1vw 6.5vw ;
+  }
+}
+
+
+/* Media Query for wrapping cards below 1200px */
+@media (max-width: 1200px) {
+    .mock-assessments-container {
+        display: flex;
+        flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+        justify-content: center;
+        gap: 20px; /* Add some space between items */
+        padding: 3%; /* Add fixed padding around the container */
+    }
+
+    .mock-assessment-item {
+        width: 48%; /* Adjust width to fit 2 items in a row */
+    }
+    .mock-assessment-button{
+      font-size: 1vw;
+      padding: 5% 40% ;
+    }
+}
+
+/* Media Query for smaller screens below 600px */
+@media (max-width: 600px) {
+    .mock-assessments-container {
+        display: flex;
+        flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+        justify-content: center;
+        gap: 20px; /* Add some space between items */
+        padding: 4%; /* Add fixed padding around the container */
+    }
+
+    .mock-assessment-item {
+        width: 100%;
+    }
+    .mock-assessment-button{
+      padding: 1.6vw 10.6vw;
+    }
+
+}
+
+
+/* cardsss */
+body {
+  font-family:Segoe UI;
+}
+
+.heading-main {
+  font-weight:600;
+  padding-block:1.5rem;
+  text-align:center;
+  font-style: bold;
+}
+
+.button-link {
+  text-decoration: none;
+  display: inline-block;
+
+}
+.start-test {
+
+  width:100%;
+  max-width: 200px;
+  background-color:rgb(58,64,160);
+  padding-block:0.75rem;
+  border: transparent;
+  border-radius:10px;
+  color:#fff;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+
+}
+button {
+  font-weight:600;
+  cursor:pointer;
+}
+.cards-container {
+  display:grid;
+  padding-inline:3rem;
+  grid-template-columns:1fr 1fr 1fr 1fr;
+  gap:1rem;
+  row-gap:2rem;
+  place-items:center;
+}
+.card {
+  padding-inline:3%;
+}
+.card img {
+  width:100%;
+}
+.card p{
+  font-size:clamp(4px,5vw,16px);
+}
+@media only screen and (max-width: 1200px) {
+  .cards-container {
+    grid-template-columns:1fr 1fr 1fr;
+    place-items: center;
+    gap:1rem;
+    padding:3%;
+  }
+  .card {
+    width: 100%;
+  }
+  .card img {
+   max-width:100%;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .cards-container {
+    grid-template-columns:1fr 1fr;
+    place-items: center;
+    gap:1rem;
+    padding: 3%;
+  }
+  .card {
+    width: 100%;
+  }
+  .card img {
+    max-width:100%;
+
+  }
+}
+@media only screen and (max-width: 600px) {
+  .cards-container {
+    grid-template-columns:auto;
+    place-items: center;
+    gap:1rem;
+    padding: 2%;
+  }
+  .card {
+    width: 100%;
+  }
+  .card img {
+   max-width:100%;
+  }
+}
+/* HARSH */
+  /* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:white;
+    padding:0 40;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .logo {
+    display:grid;
+    align-items: center;
+    width: 20vw;
+    height: 8vh;
+    top: 1%;
+  }
+  
+  .main{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap:2vw;
+    align-items: center;
+  }
+  
+  .navbar p {
+    display:grid;
+    padding:2vw;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap:0vw;
+    border-left:8vw;
+  }
+  .button {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap:2vw;
+    Gap:2vw;
+  }
+  
+  .but {
+    border-radius:5vw;
+    padding: 1vw;
+    border:5vw;
+    height: 5vh;
+    width: 7vw;
+    background: #E7EAEE;
+    cursor: pointer;
+  }
+  .but:hover {
+    scale: 1.15;
+    transition: all 300 ms ease-out;
+  }
+  
+  .butn:hover {
+    scale: 1.15;
+    transition: all 300 ms ease-out;
+  }
+  
+  .butn {
+    background: linear-gradient(180deg, #3940A0 0%, #3CA3C1 100%);
+    color: white;
+    border-radius: 4vw;
+    border: none;
+    width: 100px;
+    cursor: pointer;
+  }
+  
+  /* Content Styles */
+  .content {
+    display: grid;
+    grid-template-columns: 55% 1fr; /* First column fixed width, second column flexible */
+    margin-top: auto;
+    gap: 2rem;
+    align-items: center;
+  }
+    
+  .cont1 {
+    font-size: 1.25rem;
+    width: 100%;
+    line-height: 1.5;
+    padding-left: 5vw;
+  }
+  /* Button Styles */
+  .butn1 {
+    color: white;
+    background-color: #3940A0;
+    padding: 1rem 2vw; 
+    border-radius: 1rem;
+    border: none;
+  }
+  
+  .butn1:hover {
+    transform: scale(1.15);
+    transition: all 300ms ease-out;
+  }
+  
+  /* Image Styles */
+  .pic1 {
+    height: auto;
+    width: 70%;
+    align-items: end;
+  }
+  
+  /* Container Styles */
+  .container {
+    display: flex;
+    justify-content: space-between; 
+    gap: 2vw;
+    width: 100%; 
+    height: auto; 
+  }
+  
+  .cont2 {
+    height: auto; 
+    text-align: center;
+  }
+  
+  
+  .box1, .box2, .box3 {
+    display: grid;
+    grid-template-rows: 1fr; 
+    background-color: #F8FAFC;
+    border: 1px solid #acc9ef;
+    padding: 2rem; 
+    border-radius: 1rem; 
+    transition: transform 300ms ease-out;
+  }
+  
+  .box1:hover, .box2:hover, .box3:hover {
+    transform: scale(1.1);
+  }
+  
+  .box-img1, .box-img2, .box-img3 {
+    width: 100%; 
+    height: auto; 
+  }
+  
+  .txt1, .txt2, .txt3 {
+    color: #3940A0;
+    font-size: 1.5rem; 
+  }
+  
+  
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      padding: 1rem;
+    }
+  
+    .content {
+      grid-template-columns: 1fr; 
+    }
+  
+    .button {
+      grid-template-columns: 1fr; 
+    }
+  
+    .pic1 {
+      height: 30vh; 
+    }
+  
+    .container {
+        flex-direction: column;
+        gap:1rem;
+}}
+
+
+
+/* hompage styles */
+.homepage {
+    padding: 2% 3%;
+}
+
+.homepage-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Ensure content wraps on smaller screens */
+}
+
+.homepage-text {
+    flex: 1;
+    max-width: 60%;
+    text-align: left; /* Align text to the left at all screen sizes */
+    padding: 3%; /* Add 3% padding around text */
+}
+
+.homepage-image {
+    width: 35%;
+    margin-left: 20px;
+    max-width: 100%; /* Ensure image scales down if needed */
+    height: auto;    /* Maintain aspect ratio */
+}
+
+.homepage-text h1 {
+    font-size: 300%; /* Responsive font size */
+}
+
+.homepage-text p {
+    font-size: 150%; /* Responsive font size */
+}
+
+.homepage-button {
+    background-color: #3940A0;
+    color: white;
+    border: none;
+    padding: 0.05rem 4rem; /* Use rem for padding */
+    cursor: pointer;
+    border-radius: 0.5rem; /* Use rem for border radius */
+    font-size: 1rem; /* Base font size for the button */
+}
+
+/* Media Query for screens between 600px and 820px */
+@media (min-width: 600px) and (max-width: 820px) {
+    .homepage-content {
+        flex-direction: column;
+        align-items: center; /* Center content in column layout */
+    }
+
+    .homepage-text {
+        max-width: 100%; /* Ensure text takes full width */
+        margin-right: 0;
+        margin-bottom: 20px;
+        text-align: left; /* Align text to the left */
+    }
+
+    .homepage-image {
+        width: 85%; /* Ensure image takes full width */
+        margin-left: 0;
+    }
+
+    .homepage-text h1 {
+        font-size: calc(1.5rem + 2vw); /* Adjust font size for medium screens */
+    }
+
+    .homepage-text p {
+        font-size: calc(1rem + 1vw); /* Adjust font size for medium screens */
+    }
+
+    .homepage-button {
+        padding: calc(0.05rem + 0.1vw) calc(2rem + 4vw); /* Adjust padding relative to screen size, less top/bottom padding */
+        font-size: calc(0.8rem + 0.5vw); /* Responsive font size for button text */
+    }
+}
+
+/* Media Query for screens ≤ 600px */
+@media (max-width: 600px) {
+    .homepage-content {
+        flex-direction: column;
+        align-items: center; /* Center content in column layout */
+    }
+
+    .homepage-text {
+        max-width: 100%; /* Ensure text takes full width */
+        margin-right: 0;
+        margin-bottom: 20px;
+        text-align: left; /* Align text to the left */
+        padding: 3%; /* Add 3% padding around text */
+    }
+
+    .homepage-image {
+        width: 70%; /* Reduce image width to 70% */
+        margin-left: 0;
+    }
+
+    .homepage-text h1 {
+        font-size: calc(1rem + 3vw); /* Adjust font size for very small screens */
+    }
+
+    .homepage-text p {
+        font-size: calc(0.8rem + 2vw); /* Adjust font size for very small screens */
+    }
+
+    .homepage-button {
+        padding: calc(0.05rem + 0.1vw) calc(2rem + 4vw);
+        font-size: calc(0.8rem + 0.5vw);
+    }
+}
+
+
+/* WHY CHOOSE US SECTION */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+/* Container for the entire section */
+/* Container for the entire section */
+.why-choose-us-main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligns content to the left */
+  padding: 4%;
+  margin: 0;
+}
+
+.why-choose-us-centered-heading {
+  text-align: center; /* Keep heading centered for visual consistency */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bolder;
+  font-size: clamp(2rem, 4vw, 3rem); /* Updated to rem units */
+  line-height: clamp(2.5rem, 5vw, 4rem); /* Updated to rem units */
+  letter-spacing: 0.1rem; /* Adjusted from percentage to rem */
+  color: #0F172A;
+}
+
+.why-choose-us-flex-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid columns */
+  gap: 20px;
+  width: 100%;
+  height: auto;
+}
+
+.why-choose-us-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start; /* Align content inside card to the left */
+  background-color: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  padding: 1rem;
+  border-radius: 1.25rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.why-choose-us-card:hover {
+  transform: scale(1);
+}
+
+.why-choose-us-card-image {
+  width: 50%; /* Keep width as is */
+  height: auto; /* Adjust height for image */
+  object-fit: cover; /* Cover the area without distortion */
+  align-self: flex-start; /* Align image to the left */
+}
+
+.why-choose-us-card-title,
+.why-choose-us-card-description {
+  text-align: left; /* Align text to the left */
+}
+
+.why-choose-us-card-title {
+  color: #3940A0;
+  font-size: 1.5rem;
+  line-height: clamp(1.5rem, 3vw, 2rem);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  margin-bottom: 0.5vw;
+}
+
+.why-choose-us-card-description {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+  line-height: clamp(1.25rem, 2.5vw, 1.5rem);
+  letter-spacing: 0.1rem;
+  margin-top: 0;
+}
+
+/* Media Queries */
+
+@media (max-width: 1200px) {
+  .why-choose-us-card {
+    width: 100%;
+    height: auto;
+  }
+  .why-choose-us-card-image {
+    width: 50%; /* Keep width as is */
+    height: auto;
+    object-fit: cover;
+    align-self: flex-start; /* Align image to the left */
+  }
+
+  .why-choose-us-card-title {
+    font-size: 1.4rem; /* Adjust font size for medium screens */
+  }
+
+  .why-choose-us-card-description {
+    font-size: 1rem; /* Adjust font size for medium screens */
+  }
+}
+
+@media (max-width: 820px) {
+  .why-choose-us-card-title {
+    font-size: 1.3rem; /* Further adjust font size for smaller screens */
+  }
+
+  .why-choose-us-card-description {
+    font-size: 0.9rem; /* Further adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .why-choose-us-main-content {
+    align-items: flex-start; /* Align items to the left */
+  }
+
+  .why-choose-us-flex-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .why-choose-us-card {
+    width: 100%;
+    height: auto;
+  }
+
+  .why-choose-us-card-image {
+    width: 50%; /* Keep width as is */
+    height: auto;
+    object-fit: cover;
+    align-self: flex-start; /* Align image to the left */
+  }
+
+  .why-choose-us-card-title {
+    font-size: 1.2rem; /* Adjust font size for small screens */
+  }
+
+  .why-choose-us-card-description {
+    font-size: 0.8rem; /* Adjust font size for small screens */
+  }
+}
